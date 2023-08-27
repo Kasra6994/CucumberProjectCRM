@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="LoginRunner" project="Cucumber" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="runner.LoginRunner" time="2.199">
+    <testsuite name="Techfios billing login page functionality" time="2.199">
+      <testcase name="User should enter valid credentials and be able to login" classname="Techfios billing login page functionality" time="2.199">
+        <error>java.lang.NullPointerException
+	at steps.LoginStepDefinition.user_enters_valid_password_as(LoginStepDefinition.java:33)
+	at ✽.User enters valid password as "abc123"(file:///Users/kasrayeganeh/Desktop/Cucumber/Cucumber/src/test/resources/features/TechFiosLogin.feature:7)
+
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

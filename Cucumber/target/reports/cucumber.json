@@ -1,0 +1,96 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-08-27T03:50:04.053Z",
+        "line": 3,
+        "name": "User should enter valid credentials and be able to login",
+        "description": "",
+        "id": "techfios-billing-login-page-functionality;user-should-enter-valid-credentials-and-be-able-to-login",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1983800000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on the Techfios billing login page",
+            "match": {
+              "location": "steps.LoginStepDefinition.user_is_on_the_Techfios_billing_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 87612000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User enters valid username as \"demo@techfios.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"demo@techfios.com\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.LoginStepDefinition.user_enters_valid_username_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 35547000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User enters valid password as \"abc123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"abc123\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.LoginStepDefinition.user_enters_valid_password_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 487194000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User clicks on Sign in button",
+            "match": {
+              "location": "steps.LoginStepDefinition.user_clicks_on_Sign_in_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7956000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User should succesfully login and land on the dashboard page",
+            "match": {
+              "location": "steps.LoginStepDefinition.user_should_succesfully_login_and_land_on_the_dashboard_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Techfios billing login page functionality",
+    "description": "",
+    "id": "techfios-billing-login-page-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/TechFiosLogin.feature",
+    "tags": []
+  }
+]

@@ -1,0 +1,35 @@
+package steps;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class LoginStepDefinition {
+
+	@Given("User is on the Techfios billing login page")
+	public void user_is_on_the_Techfios_billing_login_page() {
+		
+		
+	}
+
+	@When("User enters valid username as {string}")
+	public void user_enters_valid_username_as(String username) {
+
+	}
+
+	@When("User enters valid password as {string}")
+	public void user_enters_valid_password_as(String password) {
+
+	}
+
+	@When("User clicks on Sign in button")
+	public void user_clicks_on_Sign_in_button() {
+
+	}
+
+	@Then("User should succesfully login and land on the dashboard page")
+	public void user_should_succesfully_login_and_land_on_the_dashboard_page() {
+
+	}
+
+}
