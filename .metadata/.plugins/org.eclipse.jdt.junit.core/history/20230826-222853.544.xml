@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="LoginRunner" project="Cucumber" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="runner.LoginRunner" time="1.656">
-    <testsuite name="Techfios billing login page functionality" time="1.656">
-      <testcase name="User should enter valid credentials and be able to login" classname="Techfios billing login page functionality" time="1.656"/>
-    </testsuite>
-  </testsuite>
-</testrun>
