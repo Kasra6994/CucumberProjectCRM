@@ -45,8 +45,5 @@ public class LoginPage {
 		signIn_Element.click();
 
 	}
-	public String getTitle() {
-		return driver.getTitle();
-	}
-
+	
 }

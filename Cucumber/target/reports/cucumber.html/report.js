@@ -1,13 +1,24 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/TechFiosLogin.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("classpath:features/TechFiosLogin.feature");
 formatter.feature({
   "name": "Techfios billing login page functionality",
   "description": "",
-  "keyword": "Feature"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@LoginFeature"
+    },
+    {
+      "name": "@Regression"
+    }
+  ]
 });
-formatter.scenario({
-  "name": "User should enter valid credentials and be able to login",
+formatter.background({
+  "name": "",
   "description": "",
-  "keyword": "Scenario"
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
 });
 formatter.step({
   "name": "User is on the Techfios billing login page",
@@ -18,6 +29,25 @@ formatter.match({
 });
 formatter.result({
   "status": "passed"
+});
+formatter.scenario({
+  "name": "User should enter valid credentials and be able to login",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@LoginFeature"
+    },
+    {
+      "name": "@Regression"
+    },
+    {
+      "name": "@LoginScenario1"
+    },
+    {
+      "name": "@Smoke"
+    }
+  ]
 });
 formatter.step({
   "name": "User enters valid username as \"demo@techfios.com\"",
@@ -57,6 +87,9 @@ formatter.match({
   "location": "steps.LoginStepDefinition.user_should_succesfully_login_and_land_on_the_dashboard_page()"
 });
 formatter.result({
+  "status": "passed"
+});
+formatter.after({
   "status": "passed"
 });
 });
