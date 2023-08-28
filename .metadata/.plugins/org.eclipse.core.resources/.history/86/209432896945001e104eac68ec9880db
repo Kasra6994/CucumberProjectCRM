@@ -1,0 +1,16 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+
+public class ListAccountsPage {
+
+	WebDriver driver; 
+	
+	public ListAccountsPage(WebDriver driver) {
+		
+		this.driver=driver;
+	}
+	
+	
+	@FindBy(how=How.XPATH, using = "//div[@id=\"page-wrapper\"]/div[3]/div[1]/text()")
+}

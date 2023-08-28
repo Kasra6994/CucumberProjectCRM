@@ -1,0 +1,23 @@
+package hooks;
+
+import org.openqa.selenium.support.PageFactory;
+
+import io.cucumber.java.Before;
+import pages.AddBankAccountsPage;
+import pages.DashboardPage;
+import pages.LoginPage;
+import pages.TestBase;
+
+public class Hooks extends TestBase {
+
+	
+	@Before
+	public void setUp() {
+
+		init();
+		
+	}
+
+	
+	
+}

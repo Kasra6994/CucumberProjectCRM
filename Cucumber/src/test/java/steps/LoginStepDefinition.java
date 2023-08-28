@@ -15,7 +15,7 @@ public class LoginStepDefinition extends TestBase {
 
 	LoginPage loginPage;
 
-	@Before
+	//@Before
 	public void setup() {
 		init();
 		loginPage = PageFactory.initElements(driver, LoginPage.class);
@@ -57,7 +57,7 @@ public class LoginStepDefinition extends TestBase {
 		takeScreenshot(driver);
 	}
 
-	@After
+	//@After
 	public void tearDown() {
 		try {
 			Thread.sleep(2000);
