@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AddNewBankAccountRunner" project="Cucumber" tests="2" started="2" failures="2" errors="0" ignored="0">
+  <testsuite name="runner.AddNewBankAccountRunner" time="23.68">
+    <testsuite name="Techfios Other billing login page functionality validation" time="23.68">
+      <testcase name="User should be able to login with valid credentials" classname="Techfios Other billing login page functionality validation" time="12.114">
+        <failure>
+          <expected>Account Created Succesfully</expected>
+          <actual/>
+          org.junit.ComparisonFailure: expected:&lt;[Account Created Succesfully]&gt; but was:&lt;[]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at pages.ListAccountsPage.validateAccountSuccesfullyCreated(ListAccountsPage.java:26)
+	at steps.AddBankAccountStepDefinition.user_should_be_able_to_validate_account_created_successfully(AddBankAccountStepDefinition.java:136)
+	at ✽.User should be able to validate account created successfully(file:///Users/kasrayeganeh/Desktop/Cucumber/Cucumber/src/test/resources/features/CreateBankAccount.feature:23)
+
+
+        </failure>
+      </testcase>
+      <testcase name="User should be able to login with valid credentials" classname="Techfios Other billing login page functionality validation" time="11.565">
+        <failure>
+          <expected>Account Created Succesfully</expected>
+          <actual/>
+          org.junit.ComparisonFailure: expected:&lt;[Account Created Succesfully]&gt; but was:&lt;[]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at pages.ListAccountsPage.validateAccountSuccesfullyCreated(ListAccountsPage.java:26)
+	at steps.AddBankAccountStepDefinition.user_should_be_able_to_validate_account_created_successfully(AddBankAccountStepDefinition.java:136)
+	at ✽.User should be able to validate account created successfully(file:///Users/kasrayeganeh/Desktop/Cucumber/Cucumber/src/test/resources/features/CreateBankAccount.feature:23)
+
+
+        </failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

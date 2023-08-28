@@ -11,7 +11,11 @@ import org.codehaus.plexus.util.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TestBase {
 
@@ -24,6 +28,7 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 	}
 
 	public static String getTitle() {
@@ -56,4 +61,26 @@ public class TestBase {
 		int rndNum = rnd.nextInt(bound);
 		return rndNum;
 	}
+
+	public void validateElement(String actualText, String expectedText) {
+		
+		
+		
+	}
+
+	public void waitForElement(WebDriver driver, WebElement element, int seconds) {
+		
+		WebDriverWait wait = new WebDriverWait(driver,seconds);
+		wait.until(ExpectedConditions.visibilityOf(element));
+		
+		
+	}
+
+	public void selectFromDropDown(WebElement element, String visibleText) {
+
+		Select sel = new Select(element);
+		sel.selectByVisibleText(visibleText);
+
+	}
+
 }

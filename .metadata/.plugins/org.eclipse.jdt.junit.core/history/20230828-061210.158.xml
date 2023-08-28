@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AddNewBankAccountRunner" project="Cucumber" tests="2" started="2" failures="2" errors="0" ignored="0">
+  <testsuite name="runner.AddNewBankAccountRunner" time="29.212">
+    <testsuite name="Techfios Other billing login page functionality validation" time="29.212">
+      <testcase name="User should be able to login with valid credentials" classname="Techfios Other billing login page functionality validation" time="15.239">
+        <failure>java.lang.AssertionError: expected:&lt;Account Created Succesfully&gt; but was:&lt;false&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at pages.ListAccountsPage.validateAccountSuccesfullyCreated(ListAccountsPage.java:25)
+	at steps.AddBankAccountStepDefinition.user_should_be_able_to_validate_account_created_successfully(AddBankAccountStepDefinition.java:142)
+	at ✽.User should be able to validate account created successfully(file:///Users/kasrayeganeh/Desktop/Cucumber/Cucumber/src/test/resources/features/CreateBankAccount.feature:23)
+
+</failure>
+      </testcase>
+      <testcase name="User should be able to login with valid credentials" classname="Techfios Other billing login page functionality validation" time="13.972">
+        <failure>java.lang.AssertionError: expected:&lt;Account Created Succesfully&gt; but was:&lt;false&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at pages.ListAccountsPage.validateAccountSuccesfullyCreated(ListAccountsPage.java:25)
+	at steps.AddBankAccountStepDefinition.user_should_be_able_to_validate_account_created_successfully(AddBankAccountStepDefinition.java:142)
+	at ✽.User should be able to validate account created successfully(file:///Users/kasrayeganeh/Desktop/Cucumber/Cucumber/src/test/resources/features/CreateBankAccount.feature:23)
+
+</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

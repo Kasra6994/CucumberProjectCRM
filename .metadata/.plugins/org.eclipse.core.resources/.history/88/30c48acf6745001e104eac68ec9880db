@@ -1,0 +1,24 @@
+package hooks;
+
+import org.openqa.selenium.support.PageFactory;
+
+import io.cucumber.java.Before;
+import pages.AddBankAccountsPage;
+import pages.DashboardPage;
+import pages.LoginPage;
+
+public class Hooks extends TestBase {
+
+	
+	@Before
+	public void setUp() {
+
+		init();
+		loginPage = PageFactory.initElements(driver, LoginPage.class);
+		dashboardPage = PageFactory.initElements(driver, DashboardPage.class);
+		addBankAccountsPage = PageFactory.initElements(driver, AddBankAccountsPage.class);
+	}
+
+	
+	
+}

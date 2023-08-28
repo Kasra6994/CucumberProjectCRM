@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AddNewBankAccountRunner" project="Cucumber" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="runner.AddNewBankAccountRunner" time="8.6">
+    <testsuite name="Techfios Other billing login page functionality validation" time="8.6">
+      <testcase name="User should be able to login with valid credentials" classname="Techfios Other billing login page functionality validation" time="8.6">
+        <failure>
+          <expected>Add New Account</expected>
+          <actual/>
+          org.junit.ComparisonFailure: expected:&lt;[Add New Account]&gt; but was:&lt;[]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at pages.AddBankAccountsPage.validateAddNewAccountPage(AddBankAccountsPage.java:42)
+	at steps.AddBankAccountStepDefinition.user_clicks_on_new_account(AddBankAccountStepDefinition.java:75)
+	at ✽.User clicks on New Account(file:///Users/kasrayeganeh/Desktop/Cucumber/Cucumber/src/test/resources/features/CreateBankAccount.feature:14)
+
+
+        </failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

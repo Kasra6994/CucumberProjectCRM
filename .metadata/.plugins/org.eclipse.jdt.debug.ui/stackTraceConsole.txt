@@ -1,0 +1,7 @@
+org.junit.ComparisonFailure: expected:<[]> but was:<[Add New Account]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at pages.AddBankAccountsPage.validateAddNewAccountPage(AddBankAccountsPage.java:42)
+	at steps.AddBankAccountStepDefinition.user_clicks_on_new_account(AddBankAccountStepDefinition.java:75)
+	at ✽.User clicks on New Account(file:///Users/kasrayeganeh/Desktop/Cucumber/Cucumber/src/test/resources/features/CreateBankAccount.feature:14)
+
