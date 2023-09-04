@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class LoginPage  {
+public class LoginPage extends TestBase {
 
 	WebDriver driver;
 
@@ -15,7 +15,10 @@ public class LoginPage  {
 	WebElement password_Element;
 	@FindBy(how = How.XPATH, using = "//button[@name='login']")
 	WebElement signIn_Element;
-
+	@FindBy(how = How.XPATH, using = "//div[@class='alert alert-danger fade in']")
+	WebElement invalidLoginAlert;
+	
+	
 	public LoginPage(WebDriver driver) {
 
 		this.driver = driver;
@@ -23,7 +26,12 @@ public class LoginPage  {
 	}
 
 	public void enterUserName(String username) {
-
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
 		user_Name_Element.sendKeys(username);
 
 	}
@@ -36,6 +44,12 @@ public class LoginPage  {
 
 	public void signIn() {
 		signIn_Element.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+		
+			e.printStackTrace();
+		}
 	}
 
 	public void performLogin(String username, String password) {
@@ -45,5 +59,7 @@ public class LoginPage  {
 		signIn_Element.click();
 
 	}
-	
+	public void validateInvalidLogin() {
+		invalidLoginAlert.isDisplayed();
+	}
 }

@@ -1,0 +1,9 @@
+pages/AddBankAccountsPage.class
+pages/CompaniesPage.class
+pages/ListAccountsPage.class
+pages/DashboardPage.class
+pages/AddCustomerPage.class
+pages/DataBasePage.class
+pages/CustomerSummaryPage.class
+pages/LoginPage.class
+pages/TestBase.class

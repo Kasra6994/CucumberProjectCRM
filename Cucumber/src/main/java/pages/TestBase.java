@@ -1,13 +1,17 @@
 package pages;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Properties;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.codehaus.plexus.util.FileUtils;
+import org.junit.Assert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -20,9 +24,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class TestBase {
 
 	public static WebDriver driver;
+	
 
 	public static void init() {
-
+		
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
@@ -31,9 +36,19 @@ public class TestBase {
 		
 	}
 
-	public static String getTitle() {
-		String title = driver.getTitle();
-		return title;
+	public static void readProp() {
+
+		try {
+			InputStream input = new FileInputStream("src/test/java/config/config.properties");
+			Properties prop = new Properties();
+			prop.load(input);
+			
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+
 	}
 
 	public static void takeScreenshot(WebDriver Driver) {
@@ -52,35 +67,38 @@ public class TestBase {
 			e.printStackTrace();
 		}
 
-	
 	}
 
 	public static int randomNumGenerator(int bound) {
-		
+
 		Random rnd = new Random();
 		int rndNum = rnd.nextInt(bound);
 		return rndNum;
 	}
 
-	public void validateElement(String actualText, String expectedText) {
-		
-		
-		
+	public static void validateElement(String expectedText, String actualText) {
+
+		Assert.assertEquals(expectedText, actualText);
+
 	}
 
-	public void waitForElement(WebDriver driver, WebElement element, int seconds) {
-		
-		WebDriverWait wait = new WebDriverWait(driver,seconds);
+	public static void waitForElement(WebDriver driver, WebElement element, int seconds) {
+
+		WebDriverWait wait = new WebDriverWait(driver, seconds);
 		wait.until(ExpectedConditions.visibilityOf(element));
-		
-		
+
 	}
 
-	public void selectFromDropDown(WebElement element, String visibleText) {
+	public static void selectFromDropDown(WebElement element, String visibleText) {
 
 		Select sel = new Select(element);
 		sel.selectByVisibleText(visibleText);
 
+	}
+
+	public static String getTitle() {
+		String title = driver.getTitle();
+		return title;
 	}
 
 }

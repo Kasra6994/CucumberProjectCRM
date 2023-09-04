@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: runner.AddCompanyRunnerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 8.989 s <<< FAILURE! - in runner.AddCompanyRunnerTest
+Add Company feature functionality.User Should be able to Add Company  Time elapsed: 8.709 s  <<< ERROR!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.140)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Kasras-Air.attlocal.net', ip: '2600:1700:200:26f0:0:0:0:2a%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.140, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: /var/folders/lm/gwdg6n6s0f3...}, goog:chromeOptions: {debuggerAddress: localhost:59649}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0b009459774d272c40c9797cda68f528
+*** Element info: {Using=xpath, value=//a[@id='add_company']}
+
