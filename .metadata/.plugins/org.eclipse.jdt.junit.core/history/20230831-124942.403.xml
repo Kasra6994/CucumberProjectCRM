@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AddNewBankAccountRunner" project="Cucumber" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="runner.AddNewBankAccountRunner" time="35.721">
+    <testsuite name="Techfios Create Bank Account Functionality" time="35.721">
+      <testcase name="User should be able to login with valid credentials" classname="Techfios Create Bank Account Functionality" time="18.476"/>
+      <testcase name="User should be able to login with valid credentials" classname="Techfios Create Bank Account Functionality" time="17.245"/>
+    </testsuite>
+  </testsuite>
+</testrun>

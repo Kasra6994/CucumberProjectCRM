@@ -1,0 +1,31 @@
+package pages;
+
+public class DataBasePage {
+
+	public String getDataFromDb() {
+
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		
+			String sqlUrl = "jdbc:mysql://localhost:3306/april2023";
+			String sqlUsername = "root";
+			String sqlPassword = "root";
+			String sqlQuery = "Select * from users;"
+		
+		
+		
+		} catch (ClassNotFoundException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+		
+		return null;
+	}
+
+}

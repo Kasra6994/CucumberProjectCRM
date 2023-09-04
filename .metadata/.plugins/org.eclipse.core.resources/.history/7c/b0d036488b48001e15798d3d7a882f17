@@ -1,0 +1,172 @@
+package pages;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+public class DashboardPage extends TestBase {
+
+	WebDriver driver;
+
+	public DashboardPage(WebDriver driver) {
+
+		this.driver = driver;
+	}
+
+	@FindBy(how = How.XPATH, using = "//h2[text()=' Dashboard ']")
+	WebElement dashBoardHeaderElement;
+
+	// CUSTOMERS
+	@FindBy(how = How.XPATH, using = "//span[text()='Customers']")
+	WebElement customersMenuElement;
+	@FindBy(how = How.XPATH, using = "//a[text()='Add Customer']")
+	WebElement addCustomerMenuElement;
+	@FindBy(how = How.XPATH, using = "//a[text()='List Customers']")
+	WebElement listCustomersMenuElement;
+
+	// BANK&CASH
+	@FindBy(how = How.XPATH, using = "//span[text()='Bank & Cash']")
+	WebElement bankAndCashMenuElement;
+	@FindBy(how = How.XPATH, using = "//a[text()='New Account']")
+	WebElement newBankAccountElement;
+	@FindBy(how = How.XPATH, using = "//span[text()='Companies']")
+	WebElement companiesElement;
+	
+
+	// TRANSACTIONS
+	@FindBy(how = How.XPATH, using = "//span[text()='Transactions']")
+	WebElement transactionsElement;
+	@FindBy(how = How.XPATH, using = "//a[text()='New Deposit']")
+	WebElement newDepositElement;
+	@FindBy(how = How.XPATH, using = "//h5[text()='Add Deposit']")
+	WebElement addDepositHeader;
+	@FindBy(how = How.XPATH, using = "//select[@id='account']")
+	WebElement chooseDepositAccount;
+	@FindBy(how = How.XPATH, using = "//input[@id='date']")
+	WebElement depositDateElement;
+	@FindBy(how = How.XPATH, using = "//input[@id='description']")
+	WebElement depositDescriptionElement;
+	@FindBy(how = How.XPATH, using = "//input[@id='amount']")
+	WebElement depositAmountElement;
+	@FindBy(how = How.XPATH, using = "//a[@id='a_toggle']")
+	WebElement advancedDepositOptionElement;
+	@FindBy(how = How.XPATH, using = "//span[@id='select2-cats-container']")
+	WebElement categoryElement;
+	@FindBy(how = How.XPATH, using = "//span[@id='select2-payer-container']")
+	WebElement payerElement;
+	@FindBy(how = How.XPATH, using = "select2-pmethod-container")
+	WebElement selectPaymentElement;
+	@FindBy(how = How.XPATH, using = "//a[@data-toggle='modal']")
+	WebElement attachFileElement;
+	@FindBy(how = How.XPATH, using = "//form[@id='upload_container']")
+	WebElement sendFilePathElement;
+	@FindBy(how=How.XPATH, using = "//input[@id='ref']")
+	WebElement depositRefElement;
+	@FindBy(how=How.XPATH, using = "//button[@id='submit']")
+	WebElement depositSubmitElement;
+	
+	
+	
+	public void validateDashboardPage() {
+
+		Assert.assertEquals("Dashboard", dashBoardHeaderElement.getText());
+
+	}
+
+	public void clickCustomer() {
+		customersMenuElement.click();
+	}
+
+	public void clickAddCustomer() {
+		addCustomerMenuElement.click();
+	}
+
+	public void clickListCustomer() {
+		listCustomersMenuElement.click();
+	}
+
+	public void clickBankandCash() {
+		bankAndCashMenuElement.click();
+	}
+
+	public void clickNewAccount() {
+		newBankAccountElement.click();
+	}
+
+	public void clickCompanies() {
+		companiesElement.click();
+	}
+
+	public void clickTransactions() {
+		transactionsElement.click();
+	}
+
+	public void clickNewDeposit() {
+		newDepositElement.click();
+	}
+
+	public void chooseDepositAccount(String visibleText) {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+		chooseDepositAccount.sendKeys(visibleText);
+		
+	}
+
+	public void enterDepositDate(String date) {
+		
+		depositDateElement.clear();
+		depositDateElement.sendKeys(date);
+		depositAmountElement.click();
+	}
+
+	public void enterDepositDescription(String description) {
+		depositDescriptionElement.sendKeys(description);
+	}
+
+	public void attachDepositFile(String filePath) {
+
+		attachFileElement.sendKeys(filePath);
+		
+	}
+
+	public void enterDepositAmount(String amount) {
+		depositAmountElement.sendKeys(amount);
+	}
+	public void clickAdvancedDepositOptions() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+		advancedDepositOptionElement.click();
+	}
+	public void selectDepositCategory(String visibleText) {
+		selectFromDropDown(categoryElement,visibleText);
+	}
+	public void selectDepositPayer(String visibleText) {
+		selectFromDropDown(payerElement, visibleText);
+		
+	}
+	public void selectDepositPayment(String visibleText) {
+		selectFromDropDown(selectPaymentElement, visibleText);
+	}
+	public void enterDepositRef(String ref){
+		depositRefElement.sendKeys(ref);
+	}
+	public void submitDeposit() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+		depositSubmitElement.click();
+	}
+}

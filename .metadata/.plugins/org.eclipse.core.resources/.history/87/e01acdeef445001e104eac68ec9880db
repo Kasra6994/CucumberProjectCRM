@@ -1,0 +1,29 @@
+package pages;
+
+public class DataBasePage {
+
+	public String getDataFromDb() {
+
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		
+		
+		
+		
+		
+		
+		} catch (ClassNotFoundException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+		
+		return null;
+	}
+
+}

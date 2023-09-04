@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AddDepositRunner" project="Cucumber" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="runner.AddDepositRunner" time="14.762">
+    <testsuite name="Add Deposit Functionality" time="14.762">
+      <testcase name="User should be able to successfully add deposit" classname="Add Deposit Functionality" time="14.762">
+        <error>org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been "select" but was "span"
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'Kasras-Air.attlocal.net', ip: '2600:1700:200:26f0:0:0:0:2a%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.0', java.version: '11.0.16.1'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:47)
+	at pages.TestBase.selectFromDropDown(TestBase.java:94)
+	at pages.DashboardPage.selectDepositCategory(DashboardPage.java:151)
+	at steps.StepDefinitions.user_selects_in_the_dropdown(StepDefinitions.java:328)
+	at ✽.User selects "Salary" in the "category" dropdown(classpath:features/AddDeposit.feature:19)
+
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

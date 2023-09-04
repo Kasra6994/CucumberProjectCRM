@@ -1,0 +1,18 @@
+package pages;
+
+public class DataBasePage {
+
+	public String getDataFromDb() {
+
+		Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+		
+		
+		
+		
+		
+		
+		
+		return null;
+	}
+
+}

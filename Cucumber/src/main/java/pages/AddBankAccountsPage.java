@@ -1,13 +1,12 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-import org.junit.Assert;
-
-public class AddBankAccountsPage {
+public class AddBankAccountsPage extends TestBase {
 
 	WebDriver driver;
 
@@ -37,14 +36,16 @@ public class AddBankAccountsPage {
 	
 	
 	
-	public void validateAddNewAccountPage(String expectedText) {
+	public void validateAddNewAccountPage() {
 
-		Assert.assertEquals(expectedText,addNewAccountHeader.getText());
+		Assert.assertEquals("Add New Account",addNewAccountHeader.getText());
 	}
-
+	
+	static String accountTitle;
 	public void enterAccountTitle(String title) {
-
-		accountTitleElement.sendKeys(title);
+		accountTitle = randomNumGenerator(9999)+title;
+		accountTitleElement.sendKeys(accountTitle);
+		
 	}
 
 	public void enterDescription(String description) {
@@ -75,6 +76,14 @@ public class AddBankAccountsPage {
 		internetBankingUrlElement.sendKeys(url);
 	}
 	public void clickSubmit() {
+		
+		takeScreenshot(driver);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		submitElement.click();
 	}
 }

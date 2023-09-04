@@ -1,0 +1,130 @@
+package steps;
+
+import org.openqa.selenium.support.PageFactory;
+
+import io.cucumber.java.Before;
+import io.cucumber.java.BeforeStep;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.AddCustomerPage;
+import pages.DashboardPage;
+import pages.LoginPage;
+import pages.TestBase;
+
+public class AddCustomerSteps extends TestBase {
+	
+	
+	LoginPage loginPage;
+	DashboardPage dashboardPage;
+	AddCustomerPage addCustomerPage;
+	
+	@Before("@AddCustomerFeature")
+	public void SetUp() {
+		
+		init();
+		loginPage = PageFactory.initElements(driver, LoginPage.class);
+		dashboardPage = PageFactory.initElements(driver, DashboardPage.class);
+		addCustomerPage = PageFactory.initElements(driver, AddCustomerPage.class);
+	}
+	
+	
+	@Given("User is on the Techfios login page")
+	public void user_is_on_the_Techfios_billing_login_page() {
+
+		driver.get("https://techfios.com/billing/?ng=admin/");
+
+	}
+	
+	
+	@When("User clicks sign in button and lands on Dashboard Page")
+	public void user_succesfully_login_and_land_on_DashboardPage() {
+		loginPage.signIn();
+		dashboardPage.validateDashboardPage("Dashboard");
+	}
+
+	@When("User clicks on Customers from the Dashboard Page")
+	public void user_clicks_on_Customers_from_the_Dashboard_Page() {
+		dashboardPage.clickCustomer();
+	}
+
+	@When("User clicks on Add Customer")
+	public void user_clicks_on_Add_Customer() {
+		dashboardPage.clickAddCustomer();
+	}
+
+	@When("User enters {string} in the Full Name field")
+	public void user_enters_in_the_fullName(String fullName) {
+		addCustomerPage.enterFullName(fullName);
+	}
+
+	@When("User selects {string} from the Company dropdown")
+	public void user_selects_company_from_the_dropdown(String company) {
+		addCustomerPage.enterCompanyDropDown(company);
+	}
+
+	@When("User enters {string} in the Email field")
+	public void user_enters_email_in_the_field(String email) {
+		addCustomerPage.enterEmail(email);
+	}
+
+	@When("User enters {string} in the Phone field")
+	public void user_enters_phone_in_the_field(String phone) {
+		addCustomerPage.enterPhoneNumber(phone);
+	}
+
+	@When("User enters {string} in the Address field")
+	public void user_enters_address_in_the_field(String address) {
+		addCustomerPage.enterAddress(address);
+	}
+
+	@When("User enters {string} in the City field")
+	public void user_enters_city_in_the_field(String city) {
+		addCustomerPage.enterCity(city);
+	}
+
+	@When("User enters {string} in the State field")
+	public void user_enters_state_in_the_field(String state) {
+		addCustomerPage.enterState(state);
+	}
+
+	@When("User enters {string} in the Zip field")
+	public void user_enters_zip_in_the_field(String zip) {
+		addCustomerPage.enterZip(zip);
+	}
+
+	@When("User enters {string} in the Country dropdown")
+	public void user_enters_country_in_the_dropdown(String country) {
+		addCustomerPage.selectCountry(country);
+	}
+
+	@When("User enters {string} in the Currency dropdown")
+	public void user_enters_currency_in_the_dropdown(String currency) {
+		addCustomerPage.selectCurrency(currency);
+	}	
+
+	@When("User enters {string} in the Password field")
+	public void user_enters_password_in_the_field(String password) {
+		addCustomerPage.enterPassword(password);
+	}
+
+	@When("User confirms {string} in the Confirm Password field")
+	public void user_confirms_password_in_the_field(String password) {
+		addCustomerPage.enterPassword(password);
+	}
+
+	@When("User clicks on {string}")
+	public void user_clicks_on_submit(String button) {
+		switch(button) {
+		case "Save":
+		addCustomerPage.submitContact();
+		break;
+		}
+	}
+
+	@Then("User should be able to validate the Customer was created succesfully")
+	public void user_should_be_able_to_validate_the_Customer_was_created_succesfully() {
+		
+	}
+}

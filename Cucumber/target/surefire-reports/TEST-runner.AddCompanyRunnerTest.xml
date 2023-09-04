@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="runner.AddCompanyRunnerTest" time="8.989" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/kasrayeganeh/Desktop/Cucumber/Cucumber/target/test-classes:/Users/kasrayeganeh/Desktop/Cucumber/Cucumber/target/classes:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/kasrayeganeh/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/kasrayeganeh/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/kasrayeganeh/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/kasrayeganeh/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/kasrayeganeh/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/kasrayeganeh/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/kasrayeganeh/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/kasrayeganeh/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/kasrayeganeh/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/Users/kasrayeganeh/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/kasrayeganeh/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/cucumber-java/6.10.4/cucumber-java-6.10.4.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/cucumber-core/6.10.4/cucumber-core-6.10.4.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/cucumber-gherkin/6.10.4/cucumber-gherkin-6.10.4.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.10.4/cucumber-gherkin-messages-6.10.4.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/messages/15.0.0/messages-15.0.0.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/tag-expressions/3.0.1/tag-expressions-3.0.1.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/cucumber-plugin/6.10.4/cucumber-plugin-6.10.4.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/docstring/6.10.4/docstring-6.10.4.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/html-formatter/13.0.0/html-formatter-13.0.0.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/create-meta/4.0.0/create-meta-4.0.0.jar:/Users/kasrayeganeh/.m2/repository/org/apiguardian/apiguardian-api/1.1.1/apiguardian-api-1.1.1.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/cucumber-junit/6.10.4/cucumber-junit-6.10.4.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/gherkin/5.2.0/gherkin-5.2.0.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/gherkin-jvm-deps/1.0.6/gherkin-jvm-deps-1.0.6.jar:/Users/kasrayeganeh/.m2/repository/net/masterthought/cucumber-reporting/5.0.1/cucumber-reporting-5.0.1.jar:/Users/kasrayeganeh/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.1/jackson-databind-2.10.1.jar:/Users/kasrayeganeh/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.1/jackson-annotations-2.10.1.jar:/Users/kasrayeganeh/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.1/jackson-core-2.10.1.jar:/Users/kasrayeganeh/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.10.1/jackson-datatype-jsr310-2.10.1.jar:/Users/kasrayeganeh/.m2/repository/org/apache/velocity/velocity-engine-core/2.1/velocity-engine-core-2.1.jar:/Users/kasrayeganeh/.m2/repository/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar:/Users/kasrayeganeh/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/kasrayeganeh/.m2/repository/joda-time/joda-time/2.10.2/joda-time-2.10.2.jar:/Users/kasrayeganeh/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:/Users/kasrayeganeh/.m2/repository/org/codehaus/plexus/plexus-utils/3.2.0/plexus-utils-3.2.0.jar:/Users/kasrayeganeh/.m2/repository/org/jsoup/jsoup/1.12.1/jsoup-1.12.1.jar:/Users/kasrayeganeh/.m2/repository/com/googlecode/owasp-java-html-sanitizer/owasp-java-html-sanitizer/20190610.1/owasp-java-html-sanitizer-20190610.1.jar:/Users/kasrayeganeh/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/Users/kasrayeganeh/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/kasrayeganeh/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/kasrayeganeh/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/kasrayeganeh/.m2/repository/mysql/mysql-connector-java/8.0.25/mysql-connector-java-8.0.25.jar:/Users/kasrayeganeh/.m2/repository/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar:"/>
+    <property name="java.vm.vendor" value="Microsoft"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://www.microsoft.com"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/microsoft-11.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/kasrayeganeh/Desktop/Cucumber/Cucumber/target/surefire/surefirebooter4396225187513233734.jar /Users/kasrayeganeh/Desktop/Cucumber/Cucumber/target/surefire 2023-09-03T21-28-28_424-jvmRun1 surefire6176025621933394626tmp surefire_08143867487144319012tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/kasrayeganeh/Desktop/Cucumber/Cucumber/target/test-classes:/Users/kasrayeganeh/Desktop/Cucumber/Cucumber/target/classes:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/kasrayeganeh/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/kasrayeganeh/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/kasrayeganeh/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/kasrayeganeh/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/kasrayeganeh/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/kasrayeganeh/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/kasrayeganeh/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/kasrayeganeh/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/kasrayeganeh/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/kasrayeganeh/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/Users/kasrayeganeh/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/kasrayeganeh/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/cucumber-java/6.10.4/cucumber-java-6.10.4.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/cucumber-core/6.10.4/cucumber-core-6.10.4.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/cucumber-gherkin/6.10.4/cucumber-gherkin-6.10.4.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.10.4/cucumber-gherkin-messages-6.10.4.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/messages/15.0.0/messages-15.0.0.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/tag-expressions/3.0.1/tag-expressions-3.0.1.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/cucumber-plugin/6.10.4/cucumber-plugin-6.10.4.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/docstring/6.10.4/docstring-6.10.4.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/html-formatter/13.0.0/html-formatter-13.0.0.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/create-meta/4.0.0/create-meta-4.0.0.jar:/Users/kasrayeganeh/.m2/repository/org/apiguardian/apiguardian-api/1.1.1/apiguardian-api-1.1.1.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/cucumber-junit/6.10.4/cucumber-junit-6.10.4.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/gherkin/5.2.0/gherkin-5.2.0.jar:/Users/kasrayeganeh/.m2/repository/io/cucumber/gherkin-jvm-deps/1.0.6/gherkin-jvm-deps-1.0.6.jar:/Users/kasrayeganeh/.m2/repository/net/masterthought/cucumber-reporting/5.0.1/cucumber-reporting-5.0.1.jar:/Users/kasrayeganeh/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.1/jackson-databind-2.10.1.jar:/Users/kasrayeganeh/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.1/jackson-annotations-2.10.1.jar:/Users/kasrayeganeh/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.1/jackson-core-2.10.1.jar:/Users/kasrayeganeh/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.10.1/jackson-datatype-jsr310-2.10.1.jar:/Users/kasrayeganeh/.m2/repository/org/apache/velocity/velocity-engine-core/2.1/velocity-engine-core-2.1.jar:/Users/kasrayeganeh/.m2/repository/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar:/Users/kasrayeganeh/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/kasrayeganeh/.m2/repository/joda-time/joda-time/2.10.2/joda-time-2.10.2.jar:/Users/kasrayeganeh/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:/Users/kasrayeganeh/.m2/repository/org/codehaus/plexus/plexus-utils/3.2.0/plexus-utils-3.2.0.jar:/Users/kasrayeganeh/.m2/repository/org/jsoup/jsoup/1.12.1/jsoup-1.12.1.jar:/Users/kasrayeganeh/.m2/repository/com/googlecode/owasp-java-html-sanitizer/owasp-java-html-sanitizer/20190610.1/owasp-java-html-sanitizer-20190610.1.jar:/Users/kasrayeganeh/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/Users/kasrayeganeh/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/kasrayeganeh/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/kasrayeganeh/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/kasrayeganeh/.m2/repository/mysql/mysql-connector-java/8.0.25/mysql-connector-java-8.0.25.jar:/Users/kasrayeganeh/.m2/repository/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/kasrayeganeh"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-08-12"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/microsoft-11.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="style.color" value="always"/>
+    <property name="basedir" value="/Users/kasrayeganeh/Desktop/Cucumber/Cucumber"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/Users/kasrayeganeh/Desktop/Cucumber/Cucumber/target/surefire/surefirebooter4396225187513233734.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="11.0.16.1+1-LTS"/>
+    <property name="user.name" value="kasrayeganeh"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="13.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Microsoft-40648"/>
+    <property name="localRepository" value="/Users/kasrayeganeh/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/microsoft/openjdk/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/lm/gwdg6n6s0f3dfs7vt_lvx9sr0000gn/T/"/>
+    <property name="java.version" value="11.0.16.1"/>
+    <property name="user.dir" value="/Users/kasrayeganeh/Desktop/Cucumber/Cucumber"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/kasrayeganeh/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Microsoft"/>
+    <property name="java.vm.version" value="11.0.16.1+1-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="User Should be able to Add Company" classname="Add Company feature functionality" time="8.709">
+    <error message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=116.0.5845.140)&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Kasras-Air.attlocal.net&apos;, ip: &apos;2600:1700:200:26f0:0:0:0:2a%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.0&apos;, java.version: &apos;11.0.16.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.140, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: /var/folders/lm/gwdg6n6s0f3...}, goog:chromeOptions: {debuggerAddress: localhost:59649}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 0b009459774d272c40c9797cda68f528&#10;*** Element info: {Using=xpath, value=//a[@id=&apos;add_company&apos;]}" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.140)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Kasras-Air.attlocal.net', ip: '2600:1700:200:26f0:0:0:0:2a%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.140, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: /var/folders/lm/gwdg6n6s0f3...}, goog:chromeOptions: {debuggerAddress: localhost:59649}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0b009459774d272c40c9797cda68f528
+*** Element info: {Using=xpath, value=//a[@id='add_company']}
+]]></error>
+    <system-out><![CDATA[
+@Regression @AddCompanyFeature
+Scenario Outline: User Should be able to Add Company                             # features/AddCompany.feature:24
+  Given User is on the Techfios login page                                       # steps.StepDefinitions.user_is_on_the_techfios_login_page()
+username from DB: demo@techfios.com
+  Given User enters valid "username" from mysql database                         # steps.StepDefinitions.user_enters_valid_from_mysql_database(java.lang.String)
+password from DB: abc123
+  Given User enters valid "password" from mysql database                         # steps.StepDefinitions.user_enters_valid_from_mysql_database(java.lang.String)
+  Given User clicks on "login"                                                   # steps.StepDefinitions.user_clicks_on_button(java.lang.String)
+  Given User should land on Dashboard page                                       # steps.StepDefinitions.user_should_land_on_Dashboard_page()
+  When User clicks on "Companies"                                                # steps.StepDefinitions.user_clicks_on_button(java.lang.String)
+  And User clicks on "New Company"                                               # steps.StepDefinitions.user_clicks_on_button(java.lang.String)
+      org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=116.0.5845.140)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Kasras-Air.attlocal.net', ip: '2600:1700:200:26f0:0:0:0:2a%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.140, chrome: {chromedriverVersion: 115.0.5790.170 (cc0d30c2ca5..., userDataDir: /var/folders/lm/gwdg6n6s0f3...}, goog:chromeOptions: {debuggerAddress: localhost:59649}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0b009459774d272c40c9797cda68f528
+*** Element info: {Using=xpath, value=//a[@id='add_company']}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.click(Unknown Source)
+	at pages.CompaniesPage.clickAddCompany(CompaniesPage.java:48)
+	at steps.StepDefinitions.user_clicks_on_button(StepDefinitions.java:287)
+	at ✽.User clicks on "New Company"(classpath:features/AddCompany.feature:13)
+
+  And User enters "Amazon" in the "companyName" field in the companies page      # steps.StepDefinitions.user_enters_in_the_field_in_the_companies_page(java.lang.String,java.lang.String)
+  And User enters "Amazon.com" in the "URL" field in the companies page          # steps.StepDefinitions.user_enters_in_the_field_in_the_companies_page(java.lang.String,java.lang.String)
+  And User enters "Amazon@amazon.com" in the "email" field in the companies page # steps.StepDefinitions.user_enters_in_the_field_in_the_companies_page(java.lang.String,java.lang.String)
+  And User enters "123-551" in the "phone" field in the companies page           # steps.StepDefinitions.user_enters_in_the_field_in_the_companies_page(java.lang.String,java.lang.String)
+  And User enters "amazonLogo.com" in the "logoUrl" field in the companies page  # steps.StepDefinitions.user_enters_in_the_field_in_the_companies_page(java.lang.String,java.lang.String)
+  And User clicks on "save company"                                              # steps.StepDefinitions.user_clicks_on_button(java.lang.String)
+  Then User should be able to validate new company created succesfully           # steps.StepDefinitions.user_should_be_able_to_validate_new_company_created_succesfully()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 115.0.5790.170 (cc0d30c2ca5577520c8646671513241faa0bc105-refs/branch-heads/5790@{#1923}) on port 32408
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1693794510.343][WARNING]: This version of ChromeDriver has not been tested with Chrome version 116.
+Sep 03, 2023 9:28:30 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+</testsuite>

@@ -1,0 +1,30 @@
+Feature: Techfios Add Customer Functionality
+
+  Background: 
+    Given User is on the techfios login page
+    When User enters valid "username" as "<username>"
+    When User enters valid "password" as "<password>"
+
+  Scenario Outline: User should be able to Add Customer account
+  
+  When User clicks on Customers from the Dashboard Page
+  And User clicks on Add Customer 
+	And User enters "<fullName>" in the "Full Name" field
+	And User selects "<company>" from the "Company" dropdown 
+	And User enters "<email>" in the "Email" field
+	And User enters "<phone>" in the "Phone" field 
+	And User enters "<address>" in the "Address" field
+	And User enters "<city>" in the "City" field
+	And User enters "<state>" in the "State/Region" field
+	And User enters "<zip>" in the "Zip" field
+	And User enters "<country>" in the "Country" dropdown
+	And User enters "<currency>" in the "Currency" dropdown
+	And User enters "<password>" in the "Password" field
+	And User confirms "<password>" in the "Confirm Password" field
+	And User clicks on "Save"
+	Then User should be able to validate the Customer was created succesfully
+	
+	
+	Examples: 
+	|fullName|company|email|phone|address|city|state|zip|country|currency|password
+	|CucumberMan|Uber|cucumber@gmail.com|123-412-|Selenium Dr|SelinumLand|Alaska|1|
