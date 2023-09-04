@@ -1,0 +1,65 @@
+package page;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+public class ListCustomersPage extends BasePage {
+
+	WebDriver driver;
+
+	public ListCustomersPage(WebDriver driver) {
+
+		this.driver = driver;
+	}
+
+	@FindBy(how = How.XPATH, using = "//th[text()='Manage']")
+	WebElement manageHeader;
+	@FindBy(how=How.XPATH,using = "//button[text()=\"OK\"]")
+	WebElement confirmDeleteButton;
+	@FindBy(how=How.XPATH, using = "//a[text()=\"Add Customer\"]")
+	WebElement addCustomerElement;
+	@FindBy(how=How.XPATH, using = "//a[text()=\" Import\"]")
+	WebElement importElement;
+	
+	
+	
+	public void validateListCustomersPage(String expectedText) {
+
+		validateElement(manageHeader.getText(), expectedText, "List Customers Page not Found!");
+
+	}
+
+	// //tbody/tr[1]/td[3]/a First Data tableRowLocation
+
+	String afterXpath_delete = "]/td[7]/a[2]";
+	String beforeXpath = "//tbody/tr[";
+	String afterXpath = "]/td[3]/a";
+	String actualName;
+
+	public void validateAddedCustomerAndDelete() throws InterruptedException {
+
+		for (int i = 1; i <= 10; i++) {
+
+			actualName = driver.findElement(By.xpath(beforeXpath + i + afterXpath)).getText();
+			System.out.println(actualName);
+
+			if (actualName.contains(AddCustomersPage.insertedName)) {
+
+				System.out.println("InsertedNameExists");
+
+				driver.findElement(By.xpath(beforeXpath + i + afterXpath_delete)).click();
+				confirmDeleteButton.click();
+			}
+
+		}
+	
+	}
+	public void clickaddCustomeronListCust() {
+		
+		addCustomerElement.click();
+		
+	}
+}

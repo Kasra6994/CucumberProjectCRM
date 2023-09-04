@@ -1,0 +1,17 @@
+@Regression 
+Feature: Add Deposit Functionality
+
+Background:
+
+    Given User is on the Techfios login page
+    Given User enters valid "username" from mysql database
+    Given User enters valid "password" from mysql database
+    Given User clicks on "login"
+    Given User should land on Dashboard page
+    
+ 
+ Scenario Outline: User should be able to successfully add deposit
+ 
+ When User clicks on "Transactions"
+ When User clicks on "New Deposit"
+ When User enters "<

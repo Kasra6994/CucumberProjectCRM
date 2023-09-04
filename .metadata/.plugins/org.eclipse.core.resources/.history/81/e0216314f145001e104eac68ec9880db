@@ -1,0 +1,15 @@
+@DatabaseLoginFeature @Regression
+Feature: Techfios billing login page functionality
+
+
+@DbLoginScenario1 
+Scenario: User should enter valid credentials and be able to login
+
+	Given User is on the Techfios billing login page
+	When User enters valid username from mysql database
+	When User enters valid password from mysql database 
+	When User clicks on Sign in button
+	Then User should succesfully login and land on the dashboard page
+
+
+

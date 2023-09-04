@@ -1,0 +1,18 @@
+package pages;
+
+public class DataBasePage {
+
+	public String getDataFromDb() {
+
+		
+		
+		
+		
+		
+		
+		
+		
+		return null;
+	}
+
+}

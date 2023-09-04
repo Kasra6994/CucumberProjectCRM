@@ -1,0 +1,68 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+import org.junit.Assert;
+
+public class DashboardPage {
+
+	WebDriver driver;
+
+	public DashboardPage(WebDriver driver) {
+
+		this.driver = driver;
+	}
+
+	@FindBy(how = How.XPATH, using = "//h2[text()=' Dashboard ']")
+	WebElement dashBoardHeaderElement;
+	@FindBy(how = How.XPATH, using = "//span[text()='Customers']")
+	WebElement customersMenuElement;
+	@FindBy(how = How.XPATH, using = "//a[text()='Add Customer']")
+	WebElement addCustomerMenuElement;
+	@FindBy(how = How.XPATH, using = "//a[text()='List Customers']")
+	WebElement listCustomersMenuElement;
+	@FindBy(how = How.XPATH, using = "//span[text()='Bank & Cash']")
+	WebElement bankAndCashMenuElement;
+	@FindBy(how = How.XPATH, using = "//a[text()='New Account']")
+	WebElement newBankAccountElement;
+	@FindBy(how=How.XPATH, using = "//span[text()='Companies']")
+	WebElement companiesElement;
+	@FindBy(how=How.XPATH, using = "//span[text()='Transactions']")
+	WebElement transactionsElement;
+	
+	
+	public void validateDashboardPage() {
+
+		Assert.assertEquals("Dashboard", dashBoardHeaderElement.getText());
+
+	}
+
+	public void clickCustomer() {
+		customersMenuElement.click();
+	}
+
+	public void clickAddCustomer() {
+		addCustomerMenuElement.click();
+	}
+
+	public void clickListCustomer() {
+		listCustomersMenuElement.click();
+	}
+
+	public void clickBankandCash() {
+		bankAndCashMenuElement.click();
+	}
+
+	public void clickNewAccount() {
+		newBankAccountElement.click();
+	}
+	public void clickCompanies() {
+		companiesElement.click();
+	}
+	public void clickTransactions() {
+		transactionsElement.click();
+	}
+}

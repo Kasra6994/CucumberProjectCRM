@@ -1,0 +1,28 @@
+package hooks;
+
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import pages.TestBase;
+
+public class Hooks extends TestBase {
+
+
+@Before
+public void setUp() {
+	
+	init();
+	
+	
+}
+
+
+@After
+public void tearDown() {
+	
+	driver.close();
+	driver.quit();
+}
+
+
+}

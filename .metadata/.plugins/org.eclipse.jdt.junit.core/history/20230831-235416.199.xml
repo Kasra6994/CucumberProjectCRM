@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AddDepositRunner" project="Cucumber" tests="10" started="10" failures="0" errors="0" ignored="0">
+  <testsuite name="runner.AddDepositRunner" time="0.151">
+    <testsuite name="Add Company feature functionality" time="0.069">
+      <testcase name="User Should be able to Add Company" classname="Add Company feature functionality" time="0.069">
+        <skipped>io.cucumber.junit.SkippedThrowable: This scenario is skipped
+
+</skipped>
+      </testcase>
+    </testsuite>
+    <testsuite name="Techfios Add Customer Functionality" time="0.013">
+      <testcase name="User should be able to Add Customer account" classname="Techfios Add Customer Functionality" time="0.013">
+        <skipped>io.cucumber.junit.SkippedThrowable: This scenario is skipped
+
+</skipped>
+      </testcase>
+    </testsuite>
+    <testsuite name="Add Deposit Functionality" time="0.029">
+      <testcase name="User should be able to successfully add deposit" classname="Add Deposit Functionality" time="0.029">
+        <skipped>io.cucumber.junit.UndefinedStepException: The step "User selects "Saving Account" in the "Account" dropdown" is undefined. You can implement it using tne snippet(s) below:
+
+@When("User selects {string} in the {string} dropdown")
+public void user_selects_in_the_dropdown(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+Some other steps were also undefined:
+
+@When("User attaches \"&lt;file\"&gt; in the {string} option")
+public void user_attaches_file_in_the_option(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User enters {string} in the {string} field")
+public void user_enters_in_the_field(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User selects {string} in the {string} dropdown")
+public void user_selects_in_the_dropdown(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User selects {string} in the {string} dropdown")
+public void user_selects_in_the_dropdown(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User selects {string} in the {string} dropdown")
+public void user_selects_in_the_dropdown(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User enters \"&lt;ref\"&gt; in the {string} field")
+public void user_enters_ref_in_the_field(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User should be able to validate deposit added succesfully")
+public void user_should_be_able_to_validate_deposit_added_succesfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+</skipped>
+      </testcase>
+    </testsuite>
+    <testsuite name="Techfios Create Bank Account Functionality" time="0.017">
+      <testcase name="User should be able to login with valid credentials" classname="Techfios Create Bank Account Functionality" time="0.01">
+        <skipped>io.cucumber.junit.SkippedThrowable: This scenario is skipped
+
+</skipped>
+      </testcase>
+      <testcase name="User should be able to login with valid credentials" classname="Techfios Create Bank Account Functionality" time="0.007">
+        <skipped>io.cucumber.junit.SkippedThrowable: This scenario is skipped
+
+</skipped>
+      </testcase>
+    </testsuite>
+    <testsuite name="Techfios billing login page functionality" time="0.023">
+      <testcase name="User should enter valid credentials and be able to login" classname="Techfios billing login page functionality" time="0.008">
+        <skipped>io.cucumber.junit.SkippedThrowable: This scenario is skipped
+
+</skipped>
+      </testcase>
+      <testcase name="User should enter invalid credentials and not be able to login" classname="Techfios billing login page functionality" time="0.004">
+        <skipped>io.cucumber.junit.SkippedThrowable: This scenario is skipped
+
+</skipped>
+      </testcase>
+      <testcase name="User should enter invalid credentials and not be able to login" classname="Techfios billing login page functionality" time="0.003">
+        <skipped>io.cucumber.junit.SkippedThrowable: This scenario is skipped
+
+</skipped>
+      </testcase>
+      <testcase name="User should enter invalid credentials and not be able to login" classname="Techfios billing login page functionality" time="0.004">
+        <skipped>io.cucumber.junit.SkippedThrowable: This scenario is skipped
+
+</skipped>
+      </testcase>
+      <testcase name="User should enter valid credentials from mysql database and be able to login" classname="Techfios billing login page functionality" time="0.004">
+        <skipped>io.cucumber.junit.SkippedThrowable: This scenario is skipped
+
+</skipped>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

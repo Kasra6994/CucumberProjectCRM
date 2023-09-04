@@ -1,0 +1,239 @@
+package steps;
+
+import org.junit.Assert;
+import org.openqa.selenium.support.PageFactory;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.AddCustomerPage;
+import pages.CustomerSummaryPage;
+import pages.DashboardPage;
+import pages.DataBasePage;
+import pages.LoginPage;
+import pages.TestBase;
+
+public class StepDefinitions extends TestBase {
+
+	LoginPage loginPage;
+	DashboardPage dashboardPage;
+	AddCustomerPage addCustomerPage;
+	DataBasePage databasePage;
+	CustomerSummaryPage customerSummaryPage;
+	
+	
+	@Before
+	public void setup() {
+
+		init();
+		loginPage = PageFactory.initElements(driver, LoginPage.class);
+		dashboardPage = PageFactory.initElements(driver, DashboardPage.class);
+		addCustomerPage = PageFactory.initElements(driver, AddCustomerPage.class);
+		databasePage = new DataBasePage();
+		customerSummaryPage = PageFactory.initElements(driver, CustomerSummaryPage.class);
+	
+	}
+
+	@Given("User is on the Techfios login page")
+	public void user_is_on_the_techfios_login_page() {
+
+		driver.get("https://techfios.com/billing/?ng=admin/");
+	}
+
+	@When("User enters valid username as {string}")
+	public void user_enters_valid_username_as(String username) {
+
+		loginPage.enterUserName(username);
+	}
+
+	@When("User enters valid password as {string}")
+	public void user_enters_valid_password_as(String password) {
+
+		loginPage.enterPassword(password);
+	}
+
+	@When("User clicks on Sign in button")
+	public void user_clicks_on_Sign_in_button() {
+
+		loginPage.signIn();
+	}
+
+	@Then("User should succesfully login and land on the dashboard page")
+	public void user_should_succesfully_login_and_land_on_the_dashboard_page() {
+
+		String expectedTitle = "Dashboard- iBilling";
+		String actualTitle = getTitle();
+		Assert.assertEquals(expectedTitle, actualTitle);
+		takeScreenshot(driver);
+	}
+
+	@When("User enters valid {string} from mysql database")
+	public void user_enters_valid_from_mysql_database(String loginData) {
+		if (loginData.equalsIgnoreCase("username")) {
+			loginPage.enterUserName(databasePage.getDataFromDb("username"));
+			System.out.println("username from DB: " + databasePage.getDataFromDb("username"));
+
+		} else if (loginData.equalsIgnoreCase("password")) {
+			loginPage.enterPassword(databasePage.getDataFromDb("password"));
+			System.out.println("password from DB: " + databasePage.getDataFromDb("password"));
+		} else {
+			System.out.println("Unable to retrieve data");
+		}
+
+	}
+
+	@When("User enters invalid username as {string}")
+	public void user_enters_invalid_username_as(String username) {
+		loginPage.enterUserName(username);
+	}
+
+	@When("User enters invalid password as {string}")
+	public void user_enters_invalid_password_as(String password) {
+		loginPage.enterPassword(password);
+	}
+
+	@Then("User should not be able to login")
+	public void user_should_not_be_able_to_login() {
+		loginPage.validateInvalidLogin();
+	}
+
+	@When("User clicks sign in button and lands on Dashboard Page")
+	public void user_succesfully_login_and_land_on_DashboardPage() {
+		loginPage.signIn();
+		dashboardPage.validateDashboardPage("Dashboard");
+	}
+
+	@When("User enters the {string} in the {string} field")
+	public void user_enters_the_in_the_field(String loginData, String field) {
+		switch (field) {
+		case "username":
+			loginPage.enterUserName(loginData);
+			break;
+		case "password":
+			loginPage.enterPassword(loginData);
+			break;
+		}
+	}
+
+	@Then("User should land on Dashboard page")
+	public void user_should_land_on_Dashboard_page() {
+		dashboardPage.validateDashboardPage();
+	}
+
+	@Then("User enters {string} in the {string} field in accounts page")
+	public void user_enters_in_the_field_in_accounts_page(String accountsPageData, String field) {
+		switch(field) {
+		case "accountTitle":
+			
+		}
+	
+	}
+
+	@When("User enters {string} in the {string} field in the add customer page")
+	public void user_enters_in_the_field_in_the_add_customer_page(String addCustomerData, String field) {
+
+		switch (field) {
+		case "Full Name":
+			addCustomerPage.enterFullName(addCustomerData);
+			break;
+		case "Email":
+			addCustomerPage.enterEmail(addCustomerData);
+			break;
+		case "Phone":
+			addCustomerPage.enterPhoneNumber(addCustomerData);
+			break;
+		case "Address":
+			addCustomerPage.enterAddress(addCustomerData);
+			break;
+		case "City":
+			addCustomerPage.enterCity(addCustomerData);
+			break;
+		case "State":
+			addCustomerPage.enterState(addCustomerData);
+			break;
+		case "Zip":
+			addCustomerPage.enterZip(addCustomerData);
+			break;
+		case "Password":
+			addCustomerPage.enterPassword(addCustomerData);
+			break;
+
+		}
+
+	}
+
+	@When("User selects {string} in the {string} dropdown in the add customer page")
+	public void user_selects_in_the_dropdown_in_the_add_customer_page(String addCustomerData, String dropdown) {
+
+		switch (dropdown) {
+		case "Company":
+			addCustomerPage.selectCompany(addCustomerData);
+			break;
+		case "Country":
+			addCustomerPage.selectCountry(addCustomerData);
+			break;
+		case "Currency":
+			addCustomerPage.selectCurrency(addCustomerData);
+			break;
+		case "Group":
+			addCustomerPage.selectGroup(addCustomerData);
+		}
+
+	}
+
+	@When("User confirms {string} in the {string} field in the add customer page")
+	public void user_confirms_in_the_field_in_the_add_customer_page(String password, String field) {
+		switch(field) {
+		case "Confirm Password":
+			addCustomerPage.confirmPassword(password);
+			break;
+		}	
+
+	}
+
+	@When("User clicks on {string}")
+	public void user_clicks_on_button(String button) {
+		switch (button) {
+		case "login":
+			loginPage.signIn();
+			break;
+		case "Customers":
+			dashboardPage.clickCustomer();
+			break;
+		case "Add Customer":
+			dashboardPage.clickAddCustomer();
+			break;
+		case "bankCash":
+			dashboardPage.clickBankandCash();
+			break;
+		case "newAccount":
+			dashboardPage.clickNewAccount();
+			break;
+		case "Save":
+			addCustomerPage.submitContact();
+			break;
+
+		}
+	}
+
+	@Then("User should be able to validate the Customer was created succesfully")
+	public void user_should_be_able_to_validate_the_Customer_was_created_succesfully() {
+
+	customerSummaryPage.validateSummaryPage();
+	
+	}
+
+	@After
+	public void tearDown() {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.close();
+		driver.quit();
+	}
+}

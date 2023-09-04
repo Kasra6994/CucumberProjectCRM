@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AddDepositRunner" project="Cucumber" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="runner.AddDepositRunner" time="10.941">
+    <testsuite name="Add Deposit Functionality" time="10.941">
+      <testcase name="User should be able to successfully add deposit" classname="Add Deposit Functionality" time="10.941">
+        <error>java.lang.Error: Unresolved compilation problem: 
+	The method selectDepositAccount(String) is undefined for the type DashboardPage
+
+	at steps.StepDefinitions.user_selects_in_the_dropdown(StepDefinitions.java:325)
+	at ✽.User selects "Saving Account" in the "Account" dropdown(classpath:features/AddDeposit.feature:14)
+
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

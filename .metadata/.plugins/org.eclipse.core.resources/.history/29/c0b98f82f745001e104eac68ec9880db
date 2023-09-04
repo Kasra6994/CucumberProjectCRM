@@ -1,0 +1,53 @@
+package pages;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class DataBasePage {
+
+	Connection connection;
+	Statement statement;
+	ResultSet resultSet;
+	
+	public String getDataFromDb() {
+
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		
+			String sqlUrl = "jdbc:mysql://localhost:3306/april2023";
+			String sqlUsername = "root";
+			String sqlPassword = "root";
+			String sqlQuery = "Select * from users;";
+			
+			
+			// Create connection to the local database
+			
+			connection = DriverManager.getConnection(sqlUrl, sqlUsername, sqlPassword);
+		
+		
+		
+		//Empower the connection reference variable to execute queries
+			
+			statement = connection.createStatement();
+			resultSet = statement.executeQuery(sqlQuery);
+			
+		
+		
+		} catch (ClassNotFoundException | SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+		
+		return null;
+	}
+
+}
